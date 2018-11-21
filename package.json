@@ -7,9 +7,9 @@
     "serve": "gatsby serve",
     "ssr": "npm run build && npm run serve",
     "format": "prettier --config ./.prettierrc --write src/**/*.js",
-    "build:dir": "mkdir -p public/icons/",
-    "build:favicons": "node scripts/favicons",
-    "build": "yarn run build:dir && yarn run build:favicons && gatsby build",
+    "mybuild:dir": "mkdir -p public/icons/",
+    "mybuild:favicons": "node scripts/favicons",
+    "mybuild": "yarn run mybuild:dir && yarn run mybuild:favicons && gatsby build",
     "test": "ava **/*.test.js --verbose"
   },
   "dependencies": {
