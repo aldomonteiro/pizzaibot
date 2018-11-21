@@ -13,7 +13,7 @@ if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir);
 }
 
-const source = 'src/images/icon.png';
+const source = 'src/images/pizzaibot-avatar1024.png';
 const configuration = {
   path: '/icons/',
   appName: siteTitleShort,
@@ -41,7 +41,7 @@ const configuration = {
   },
 };
 
-const callback = function(err, res) {
+const callback = function (err, res) {
   if (err) {
     console.log(err.message);
     return;
