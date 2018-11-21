@@ -6,7 +6,7 @@ class Nav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      windowWidth: window.innerWidth,
+      windowWidth: typeof window !== 'undefined' ? window.innerWidth : 0,
     }
   }
 
