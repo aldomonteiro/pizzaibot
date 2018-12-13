@@ -30,7 +30,7 @@ class Nav extends React.Component {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/politica-de-privacidade">Termos de Uso e Política de Privacidade</a>
+            <Link to="/politica-de-privacidade">Termos de Uso e Política de Privacidade</Link>
           </li>
         </ul>
       </Container>

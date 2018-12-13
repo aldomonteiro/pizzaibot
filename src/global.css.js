@@ -2,7 +2,9 @@ import { createGlobalStyle } from 'styled-components';
 import { accent } from 'constants/theme';
 
 export default createGlobalStyle`
-  html, body, div, span, applet, object, iframe,
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+  html, body, span, applet, object, iframe, div,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
   del, dfn, em, img, ins, kbd, q, s, samp,
@@ -46,6 +48,16 @@ export default createGlobalStyle`
     -webkit-font-feature-settings: "pnum";
     font-feature-settings: "pnum";
     font-variant-numeric: proportional-nums;
+  }
+
+  h2 { 
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; 
+    font-size: 24px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 26.4px; 
+    color: #35439B;
   }
 
   ol, ul {

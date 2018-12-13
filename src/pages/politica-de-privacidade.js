@@ -10,7 +10,7 @@ const PoliticaDePrivacidade = ({ data }) => (
   <Layout>
     <Head pageTitle={data.politicadeprivacidadeJson.title} />
     <Box>
-      <div
+      <div style={{ padding: '50px 20px 5px 5px', height: '95vh' }}
         dangerouslySetInnerHTML={{
           __html: data.politicadeprivacidadeJson.content.childMarkdownRemark.html,
         }}
