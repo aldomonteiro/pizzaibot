@@ -7,7 +7,8 @@ import Pricing from 'components/pricing'
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-import IndexHero from 'components/index/index-hero'
+import IndexHero from 'components/index/index-hero';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 const ContainerBackg = styled.div`
   position: absolute;
@@ -36,32 +37,40 @@ const ContainerTitleText = styled.div`
 `;
 
 const Index = ({ data }) => (
-  <Layout>
-    <Box>
-      <IndexHero />
-    </Box>
-    <Box>
-      <ContainerBackg>
-        <Img sizes={data.backg2.childImageSharp.sizes}
-          style={{ height: '100vh' }} />
-      </ContainerBackg>
-      <ContainerTitleText>
-        <div>
-          <Title as="h2" size="large">
-            Enquanto nós geramos os pedidos para você...
-            </Title>
-          <ContainerText>
-            <p>você foca em preparar a melhor e mais rápida refeição para os seus clientes.</p>
-          </ContainerText>
-        </div>
-      </ContainerTitleText>
-    </Box>
-    <section id="planos">
+  <div>
+    <Layout>
       <Box>
-        <Pricing />
+        <IndexHero />
       </Box>
-    </section>
-  </Layout >
+      <Box>
+        <ContainerBackg>
+          <Img sizes={data.backg2.childImageSharp.sizes}
+            style={{ height: '100vh' }} />
+        </ContainerBackg>
+        <ContainerTitleText>
+          <div>
+            <Title as="h2" size="large">
+              Enquanto nós geramos os pedidos para você...
+            </Title>
+            <ContainerText>
+              <p>você foca em preparar a melhor e mais rápida refeição para os seus clientes.</p>
+            </ContainerText>
+          </div>
+        </ContainerTitleText>
+      </Box>
+      <section id="planos">
+        <Box>
+          <Pricing />
+        </Box>
+      </section>
+    </Layout >
+    <div style={{ position: 'absolute', bottom: 0, left: 0 }}>
+      <MessengerCustomerChat
+        pageId="278383016327989"
+        appId="493125474434244"
+      />
+    </div>
+  </div>
 );
 
 Index.propTypes = {
