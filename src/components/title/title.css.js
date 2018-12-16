@@ -7,17 +7,17 @@ export const Text = styled.span`
   font-weight: ${({ size }) => () => {
     switch (size) {
       case 'large':
-        return '400';
+        return '800';
       default:
-        return '500';
+        return '800';
     }
   }};
   font-size: ${({ size }) => () => {
     switch (size) {
       case 'large':
-        return '3.2rem';
+        return '5rem';
       default:
-        return '2rem';
+        return '3rem';
     }
   }};
   line-height: 1.2;
@@ -26,10 +26,22 @@ export const Text = styled.span`
     font-size: ${({ size }) => () => {
       switch (size) {
         case 'large':
-          return '2.6rem';
+          return '3.5rem';
         default:
           return '2rem';
       }
     }};
   `};
+
+  ${MEDIA.PHONE`
+  font-size: ${({ size }) => () => {
+      switch (size) {
+        case 'large':
+          return '3rem';
+        default:
+          return '2rem';
+      }
+    }};
+`};
+
 `;

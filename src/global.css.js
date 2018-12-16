@@ -60,6 +60,16 @@ export default createGlobalStyle`
     color: #35439B;
   }
 
+  h3 { 
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; 
+    font-size: 20px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 25px; 
+    color: white;
+  }
+
   ol, ul {
     list-style: none;
   }
