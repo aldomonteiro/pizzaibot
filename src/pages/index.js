@@ -68,6 +68,7 @@ const Index = ({ data }) => (
       <MessengerCustomerChat
         pageId="278383016327989"
         appId="493125474434244"
+        language="pt_BR"
       />
     </div>
   </div>
