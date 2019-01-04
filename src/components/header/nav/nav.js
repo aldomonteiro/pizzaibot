@@ -39,7 +39,6 @@ class Nav extends React.Component {
               && (<AnchorLink href="#planos">Planos e Preços</AnchorLink>)}
             {!this.state.onePage
               && (<Link to="/planos">Planos e Preços</Link>)}
-
           </li>
           <li>
             <Link to="/politica-de-privacidade">Termos de Uso</Link>

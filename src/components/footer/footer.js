@@ -98,7 +98,7 @@ const Footer = () => (
                 <StyledZap size="36" />
                 <Dl>
                     <Dt>Telefone:</Dt>
-                    <Dd>(044) 99948-5760</Dd>
+                    <Dd>(041) 98416-3676</Dd>
                 </Dl>
             </IconContainer>
             <IconContainer>
