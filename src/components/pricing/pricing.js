@@ -38,7 +38,7 @@ const Pricing = () => (
                         <div>Delivery</div>
                     </PriceHeader>
                     <PriceItem bgColor="#00Aeef" fontSize="30px">R$ 197,00 / mês</PriceItem>
-                    <PriceItem>400 pedidos por mês</PriceItem>
+                    <PriceItem>Pedidos ilimitados!</PriceItem>
                     <PriceItem>Sistema de gestão de pedidos online</PriceItem>
                     <PriceItem>Consultas ilimitadas</PriceItem>
                     <PriceItem>Alertas para os clientes</PriceItem>
