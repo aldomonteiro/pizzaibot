@@ -25,7 +25,8 @@ const Pricing = () => (
                     <PriceItem bgColor="#cccc00" fontSize="30px">R$ 0,00 / mês</PriceItem>
                     <PriceItem fontSize="15px">Experimente sem pagar nada. Quando o limite de pedidos for atendido,
                         o seu plano será atualizado para o Plano Delivery.</PriceItem>
-                    <PriceItem>20 pedidos por mês</PriceItem>
+                    <PriceItem>100 pedidos por mês</PriceItem>
+                    <PriceItem>Cardápio Online</PriceItem>
                     <PriceItem>Sistema de gestão de pedidos online</PriceItem>
                     <PriceItem>Consultas ilimitadas</PriceItem>
                     <PriceItem>Alertas para os clientes</PriceItem>
@@ -39,6 +40,7 @@ const Pricing = () => (
                     </PriceHeader>
                     <PriceItem bgColor="#00Aeef" fontSize="30px">R$ 197,00 / mês</PriceItem>
                     <PriceItem>Pedidos ilimitados!</PriceItem>
+                    <PriceItem>Cardápio Online</PriceItem>
                     <PriceItem>Sistema de gestão de pedidos online</PriceItem>
                     <PriceItem>Consultas ilimitadas</PriceItem>
                     <PriceItem>Alertas para os clientes</PriceItem>
@@ -55,6 +57,7 @@ const Pricing = () => (
                         criar uma solução para gestão de pedidos gerados em uma única página
                         e entregues por várias lojas.</PriceItem>
                     <PriceItem>Sistem de gestão de pedidos online</PriceItem>
+                    <PriceItem>Cardápio Online</PriceItem>
                     <PriceItem>Consultas ilimitadas</PriceItem>
                     <PriceItem>Alertas para os clientes</PriceItem>
                     <PriceItem>Segmentação de pedidos por loja/endereço do cliente</PriceItem>
