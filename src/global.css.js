@@ -50,6 +50,16 @@ export default createGlobalStyle`
     font-variant-numeric: proportional-nums;
   }
 
+  h1 { 
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; 
+    font-size: 28px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 28px; 
+    color: #35439B;
+  }
+
   h2 { 
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; 
     font-size: 24px; 

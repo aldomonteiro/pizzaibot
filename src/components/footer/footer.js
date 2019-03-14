@@ -79,6 +79,10 @@ const StyledZap = styled(Whatsapp)`
     color: white;
 `;
 
+const StyledA = styled.a`
+    color: white;
+`;
+
 
 const Footer = () => (
     <MainContainer>
@@ -91,7 +95,7 @@ const Footer = () => (
                 <StyledMail size="36" />
                 <Dl>
                     <Dt>E-mail:</Dt>
-                    <Dd><a href="mailto:pizzaibot@gmail.com">pizzaibot@gmail.com</a></Dd>
+                    <Dd><StyledA href="mailto:pizzaibot@gmail.com">pizzaibot@gmail.com</StyledA></Dd>
                 </Dl>
             </IconContainer>
             <IconContainer>
@@ -105,7 +109,7 @@ const Footer = () => (
                 <StyledFace size="36" />
                 <Dl>
                     <Dt>Facebook:</Dt>
-                    <Dd><a href="https://www.facebook.com/pizzaibot/">@pizzaibot</a></Dd>
+                    <Dd><StyledA href="https://www.facebook.com/pizzaibot/">@pizzaibot</StyledA></Dd>
                 </Dl>
             </IconContainer>
         </SubContainer>
