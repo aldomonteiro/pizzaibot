@@ -6,7 +6,7 @@ Aqui estão os arquivos necessários para conectar o seu Whatsapp Web ao Pizzaib
 
 ## Whatsapp Web
 <br/>
-<a href="https://drive.google.com/open?id=1zgWB6VAxk0y2wUU8NNVBlGxMsvINJ71t">
+<a href="https://drive.google.com/open?id=1JDzx53_jJ-Z-fVgdJBLB6xiU4cSYfTmp">
 Baixe aqui o Whatsapp Web do Pizzaibot
 </a>
 <br/>
