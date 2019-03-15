@@ -95,7 +95,7 @@ const Footer = () => (
                 <StyledMail size="36" />
                 <Dl>
                     <Dt>E-mail:</Dt>
-                    <Dd><StyledA href="mailto:pizzaibot@gmail.com">pizzaibot@gmail.com</StyledA></Dd>
+                    <Dd><StyledA href="mailto:contato@pizzaibot.com">contato@pizzaibot.com</StyledA></Dd>
                 </Dl>
             </IconContainer>
             <IconContainer>
