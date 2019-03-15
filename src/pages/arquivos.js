@@ -7,9 +7,9 @@ import Box from 'components/box';
 import Head from 'components/head';
 import Img from 'gatsby-image';
 
-const Download = ({ data }) => (
+const Arquivos = ({ data }) => (
     <Layout>
-        <Head pageTitle={data.downloadJson.title} />
+        <Head pageTitle={data.arquivosJson.title} />
         <Box>
             <div style={{
                 width: '90vw', display: 'flex',
@@ -18,7 +18,7 @@ const Download = ({ data }) => (
             }}>
                 <div
                     dangerouslySetInnerHTML={{
-                        __html: data.downloadJson.content.childMarkdownRemark.html
+                        __html: data.arquivosJson.content.childMarkdownRemark.html
                     }}
                 />
                 <div style={{ height: '500px', width: '500px' }}>
@@ -29,15 +29,15 @@ const Download = ({ data }) => (
     </Layout >
 );
 
-Download.propTypes = {
+Arquivos.propTypes = {
     data: PropTypes.object.isRequired
 };
 
-export default Download;
+export default Arquivos;
 
 export const query = graphql`
-  query DownloadQuery {
-    downloadJson {
+  query ArquivosQuery {
+    arquivosJson {
       title
       content {
         childMarkdownRemark {
