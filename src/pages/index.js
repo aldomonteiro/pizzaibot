@@ -37,45 +37,46 @@ const ContainerTitleText = styled.div`
 `;
 
 const Index = ({ data }) => (
-  <div>
-    <Layout>
-      <Box>
-        <IndexHero />
-      </Box>
-      <Box>
-        <ContainerBackg>
-          <Img sizes={data.backg2.childImageSharp.sizes}
-            style={{ height: '100vh' }} />
-        </ContainerBackg>
-        <ContainerTitleText>
-          <div>
-            <Title as="h2" size="large">
-              Enquanto nós geramos os pedidos para você...
-            </Title>
-            <ContainerText>
-              <p>você foca em preparar a melhor e mais rápida refeição para os seus clientes.</p>
-            </ContainerText>
-          </div>
-        </ContainerTitleText>
-      </Box>
-      <section id="planos">
-        <Box>
-          <Pricing />
-        </Box>
-      </section>
-    </Layout >
-    <div style={{ position: 'absolute', bottom: 0, left: 0 }}>
-      <MessengerCustomerChat
-        pageId="278383016327989"
-        appId="493125474434244"
-        language="pt_BR"
-      />
+    <div>
+        <Layout>
+            <Box>
+                <IndexHero />
+            </Box>
+            <Box>
+                <ContainerBackg>
+                    <Img sizes={data.backg2.childImageSharp.sizes}
+                        style={{ height: '100vh' }} />
+                </ContainerBackg>
+                <ContainerTitleText>
+                    <div>
+                        <Title as="h2" size="large">
+                            Enquanto nós geramos os pedidos para você...
+                        </Title>
+                        <ContainerText>
+                            <p>você foca em preparar a melhor e mais rápida refeição para os seus clientes.</p>
+                        </ContainerText>
+
+                    </div>
+                </ContainerTitleText>
+            </Box>
+            <section id="planos">
+                <Box>
+                    <Pricing />
+                </Box>
+            </section>
+        </Layout >
+        <div style={{ position: 'absolute', bottom: 0, left: 0 }}>
+            <MessengerCustomerChat
+                pageId="278383016327989"
+                appId="493125474434244"
+                language="pt_BR"
+            />
+        </div>
     </div>
-  </div>
 );
 
 Index.propTypes = {
-  data: PropTypes.object.isRequired,
+    data: PropTypes.object.isRequired,
 };
 
 export default Index;

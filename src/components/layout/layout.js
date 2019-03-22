@@ -6,24 +6,25 @@ import Header from 'components/header';
 import GlobalStyle from 'global.css.js';
 import Footer from '../footer/footer';
 
-const Layout = ({ data, children }) => (
-  <div style={{ position: 'relative', display: 'flex', flexDirection: 'column' }}>
-    <GlobalStyle />
-    <Head />
-    <Header title={data.site.siteMetadata.siteTitle} />
-    {children}
-    <Footer />
-  </div>
+const Layout = ({ data, noHeader, noFooter, children }) => (
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <GlobalStyle />
+        <Head />
+        {!noHeader && (<Header title={data.site.siteMetadata.siteTitle} />)}
+        {children}
+        {!noFooter && (<Footer />)}
+    </div>
 );
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-  data: PropTypes.object.isRequired,
+    children: PropTypes.node.isRequired,
+    data: PropTypes.object.isRequired,
+    noHeader: PropTypes.bool,
 };
 
 const LayoutWithQuery = props => (
-  <StaticQuery
-    query={graphql`
+    <StaticQuery
+        query={graphql`
       query LayoutQuery {
         site {
           siteMetadata {
@@ -32,12 +33,12 @@ const LayoutWithQuery = props => (
         }
       }
     `}
-    render={data => <Layout data={data} {...props} />}
-  />
+        render={data => <Layout data={data} {...props} />}
+    />
 );
 
 LayoutWithQuery.propTypes = {
-  children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 };
 
 export default LayoutWithQuery;

@@ -1,17 +1,15 @@
 /* eslint-disable prettier/prettier */
 const siteConfig = require('./site-config');
 
+require('dotenv').config({
+    path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
     siteMetadata: {
         ...siteConfig,
     },
     plugins: [
-        'gatsby-plugin-react-helmet',
-        'gatsby-plugin-sitemap',
-        'gatsby-plugin-offline',
-        'gatsby-transformer-json',
-        'gatsby-transformer-remark',
-        'gatsby-plugin-eslint',
         {
             resolve: 'gatsby-source-filesystem',
             options: {
@@ -19,8 +17,6 @@ module.exports = {
                 path: `${__dirname}/content`,
             },
         },
-        'gatsby-plugin-sharp',
-        'gatsby-transformer-sharp',
         {
             resolve: 'gatsby-transformer-remark',
             options: {
@@ -28,21 +24,20 @@ module.exports = {
                     {
                         resolve: 'gatsby-remark-images',
                         options: {
-                            maxWidth: 590,
+                            maxWidth: 630,
                         },
                     },
-                    {
-                        resolve: 'gatsby-remark-responsive-iframe',
-                        options: {
-                            wrapperStyle: 'margin-bottom: 1.0725rem',
-                        },
-                    },
-                    'gatsby-remark-prismjs',
                     'gatsby-remark-copy-linked-files',
-                    'gatsby-remark-smartypants',
                 ],
             },
         },
+        'gatsby-plugin-react-helmet',
+        'gatsby-plugin-sitemap',
+        'gatsby-plugin-offline',
+        'gatsby-transformer-json',
+        'gatsby-plugin-eslint',
+        'gatsby-plugin-sharp',
+        'gatsby-transformer-sharp',
         'gatsby-plugin-webpack-size',
         {
             resolve: 'gatsby-plugin-react-svg',
@@ -57,6 +52,6 @@ module.exports = {
             options: {
                 trackingId: 'UA-131738167-1',
             },
-        },
+        }
     ],
 };

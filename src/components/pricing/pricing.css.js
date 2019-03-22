@@ -25,9 +25,8 @@ export const Items = styled.div`
     flex-wrap:wrap;
 `;
 
-
 export const Columns = styled.div`
-    width: 30%;
+    width: 24%;
     margin: 1px;
     @media only screen and (max-width: 600px) {
         width: 100%;
@@ -61,14 +60,13 @@ export const PriceHeader = styled.li`
 
 export const PriceItem = styled.li`
     background-color: ${props => props.bgColor ? props.bgColor : 'white'}
-    color: ${props => props.bgColor ? 'white' : 'black'}
-    font-size: ${props => props.fontSize ? props.fontSize : '20px'}
+    color: ${props => props.color ? props.color : 'black'}
+    font-size: ${props => props.fontSize ? props.fontSize : '18px'}
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; 
     border-bottom: 1px solid #eee;
     padding: 20px;
     text-align: center;
 `;
-
 
 //   .price.grey {
 //     background - color: #eee;

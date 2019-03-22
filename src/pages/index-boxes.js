@@ -9,48 +9,36 @@ import { graphql } from 'gatsby';
 import { Link, Element } from 'react-scroll';
 
 // const Index = ({ data }) => (
-class Index extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <Layout>
+const Index = ({ data }) => (
+    <Layout>
         <Box>
-          <Title as="h2" size="large">
-            {
-              this.props.data.homeJson.content.childMarkdownRemark
-                .rawMarkdownBody
-            }
-          </Title>
-          <Link
-            activeClass="active"
-            className="scroll-down icon-arrow-left"
-            to="content"
-            data-offset="-45"
-            spy={true}
-            smooth={true}
-            duration={500}
-          >
-            <i className="down bounce"></i>
-          </Link>
+            <Title as="h2" size="large">
+                {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
+            </Title>
+            <Link
+                activeClass="active"
+                className="scroll-down icon-arrow-left"
+                to="content"
+                data-offset="-45"
+                spy={true}
+                smooth={true}
+                duration={500}
+            >
+                <i className="down bounce"></i>
+            </Link>
         </Box>
         <Box>
-          <Element name="content">
-            <Gallery items={this.props.data.homeJson.gallery} />
-            {/* <div style={{ height: '50vh' }} /> */}
-            <IOExample />
-          </Element>
+            <Element name="content">
+                <Gallery items={data.homeJson.gallery} />
+                {/* <div style={{ height: '50vh' }} /> */}
+                <IOExample />
+            </Element>
         </Box>
-      </Layout>
-    );
-  }
-  // );
-}
+    </Layout>
+);
 
 Index.propTypes = {
-  data: PropTypes.object.isRequired,
+    data: PropTypes.object.isRequired,
 };
 
 export default Index;

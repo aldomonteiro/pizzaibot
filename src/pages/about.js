@@ -5,22 +5,21 @@ import Layout from 'components/layout';
 import Box from 'components/box';
 import Head from 'components/head';
 
-
 const About = ({ data }) => (
-  <Layout>
-    <Head pageTitle={data.aboutJson.title} />
-    <Box>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: data.aboutJson.content.childMarkdownRemark.html,
-        }}
-      />
-    </Box>
-  </Layout>
+    <Layout>
+        <Head pageTitle={data.aboutJson.title} />
+        <Box>
+            <div
+                dangerouslySetInnerHTML={{
+                    __html: data.aboutJson.content.childMarkdownRemark.html,
+                }}
+            />
+        </Box>
+    </Layout>
 );
 
 About.propTypes = {
-  data: PropTypes.object.isRequired,
+    data: PropTypes.object.isRequired,
 };
 
 export default About;

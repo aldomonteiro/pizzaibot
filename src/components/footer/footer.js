@@ -83,7 +83,6 @@ const StyledA = styled.a`
     color: white;
 `;
 
-
 const Footer = () => (
     <MainContainer>
         <TitleContainer>
