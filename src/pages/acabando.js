@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql, Link } from 'gatsby';
-import SkyLight from 'react-skylight';
+import { graphql } from 'gatsby';
+import Modal from 'react-responsive-modal';
 
 import Layout from 'components/layout';
 // import Box from 'components/box';
@@ -13,6 +13,22 @@ import Button from '../components/button/button';
 import Cadastro from '../components/cadastro/cadastro';
 
 class Page extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            open: false,
+        };
+        this.myRef = React.createRef();
+    }
+
+    onOpenModal = () => {
+        this.setState({ open: true });
+    };
+
+    onCloseModal = () => {
+        this.setState({ open: false });
+    };
+
     render () {
         const { data } = this.props;
         return (
@@ -30,12 +46,16 @@ class Page extends React.Component {
                             __html: data.markdownRemark.html
                         }}
                     />
-                    <Button onClick={() => this.simpleDialog.show()}>
+                    <Button onClick={() => this.setState({ open: true })}>
                         Quero transformar o Whatsapp no meu aliado!
                     </Button>
-                    <SkyLight hideOnOverlayClicked ref={ref => { this.simpleDialog = ref }} title="Pré-Cadastro">
+                    <Modal
+                        open={this.state.open}
+                        onClose={this.onCloseModal}
+                        center
+                        container={this.myRef.current}>
                         <Cadastro />
-                    </SkyLight>
+                    </Modal>
                 </div>
             </Layout>
         );

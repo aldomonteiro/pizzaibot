@@ -1,10 +1,19 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import styled from 'styled-components';
-import axios from 'axios';
 
 import Button from '../button/button';
 import IconField from './icon-field';
+
+const Container = styled.div`
+    width: 90%;
+    hight: 90%;
+`;
+
+const ContainerTxt = styled.div`
+    font-size: 2rem;
+    text-align: center;
+`;
 
 const StyledField = styled(Field)`
   padding: 0.5em;
@@ -28,13 +37,13 @@ class Page extends React.Component {
 
     render () {
         return (
-            <React.Fragment>
+            <Container>
                 {this.state.showForm ? (
                     <React.Fragment>
-                        <div>
+                        <ContainerTxt>
                             Preencha os seus dados de contato abaixo, que entraremos em contato o mais
                             breve possível para te ajudar a começar a testar o sistema.
-                        </div>
+                        </ContainerTxt>
                         <Formik
                             initialValues={{ email: '', nome: '', whatsapp: '' }}
                             validate={values => {
@@ -105,7 +114,7 @@ class Page extends React.Component {
                         Enviar novamente
                     </a>
                 </div>)}
-            </React.Fragment>
+            </Container>
         );
     }
 }
