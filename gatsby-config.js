@@ -3,7 +3,7 @@ const siteConfig = require('./site-config');
 
 require('dotenv').config({
     path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
     siteMetadata: {
@@ -17,6 +17,7 @@ module.exports = {
                 path: `${__dirname}/content`,
             },
         },
+        'gatsby-transformer-json',
         {
             resolve: 'gatsby-transformer-remark',
             options: {
@@ -34,7 +35,6 @@ module.exports = {
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sitemap',
         'gatsby-plugin-offline',
-        'gatsby-transformer-json',
         'gatsby-plugin-eslint',
         'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',
