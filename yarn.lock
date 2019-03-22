@@ -4095,9 +4095,10 @@ dir-glob@^2.0.0:
     arrify "^1.0.1"
     path-type "^3.0.0"
 
-directory-named-webpack-plugin@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/directory-named-webpack-plugin/-/directory-named-webpack-plugin-4.0.0.tgz#b68220d4143c990a87ae8e09661bea700afe5f3c"
+directory-named-webpack-plugin@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/directory-named-webpack-plugin/-/directory-named-webpack-plugin-4.0.1.tgz#d5f422310bb446297ec422d3656dbf0921a6fa26"
+  integrity sha512-cULe7U64O9NM+O+L9gfcVKPo/A0pNEntsXTpuRHoCFMYE5pV9XQrJI9mJ8bgo0WKPmKPw/kozXfRolNNFJICCA==
   dependencies:
     enhanced-resolve "^4.0.0"
     object-assign "^4.1.0"
@@ -5864,14 +5865,6 @@ gatsby-source-filesystem@^2.0.25:
     slash "^1.0.0"
     valid-url "^1.0.9"
     xstate "^3.1.0"
-
-gatsby-transformer-json@^2.1.11:
-  version "2.1.11"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-2.1.11.tgz#b1c9acbc0da6e7e11b7dd278e9543171a71ecd89"
-  integrity sha512-vVNjAV93c3aFbW6GJxG+rxuzr3Absadv9RYMaUh7OBhmSPYDyb+4JvaCvEfL+4P/ZEN3Ch4GNUD2eCNgfnF2tw==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    bluebird "^3.5.0"
 
 gatsby-transformer-remark@^2.3.8:
   version "2.3.8"
