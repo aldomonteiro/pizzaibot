@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import React from 'react';
 import Title from '../title';
 import { StaticQuery, graphql } from 'gatsby';

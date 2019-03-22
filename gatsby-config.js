@@ -17,7 +17,6 @@ module.exports = {
                 path: `${__dirname}/content`,
             },
         },
-        'gatsby-transformer-json',
         {
             resolve: 'gatsby-transformer-remark',
             options: {
@@ -32,6 +31,7 @@ module.exports = {
                 ],
             },
         },
+        'gatsby-transformer-json',
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sitemap',
         'gatsby-plugin-offline',

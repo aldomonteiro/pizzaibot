@@ -184,4 +184,8 @@ export default createGlobalStyle`
       transform: translateY(-10px) rotate(45deg);
     }
   }
+
+  whatslogo {
+    color: green;
+  }
 `;
