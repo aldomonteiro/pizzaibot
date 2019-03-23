@@ -16,7 +16,7 @@ const StyledField = styled.input`
   color: blue;
   font-size: 20px;
   background: #D4DFF0;
-  width: 90%;
+  width: 95%;
   padding-left: 40px;
   height: 20px;
 `;

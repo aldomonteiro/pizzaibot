@@ -45,7 +45,7 @@ class Page extends React.Component {
                             breve possível para te ajudar a começar a testar o sistema.
                         </ContainerTxt>
                         <Formik
-                            initialValues={{ email: '', nome: '', whatsapp: '' }}
+                            initialValues={{ email: '', nome: '', whatsapp: '', obs: '' }}
                             validate={values => {
                                 let errors = {};
                                 if (!values.email) {
@@ -94,11 +94,13 @@ class Page extends React.Component {
                             }}>
                             {({ submitForm, isSubmitting }) => (
                                 <Form>
-                                    <StyledField type="text" name="nome" placeHolder="Nome" />
+                                    <StyledField type="text" name="nome" placeholder="Nome" />
                                     <StyledErrMsg name="nome" component="div" />
-                                    <StyledField type="email" name="email" placeHolder="E-mail" />
+                                    <StyledField type="email" name="email" placeholder="E-mail" />
                                     <StyledErrMsg name="email" component="div" />
                                     <Field name="whatsapp" component={IconField} />
+                                    <StyledField type="obs" name="obs" placeholder="Qual o melhor horário para falarmos com você?" />
+                                    <div>&nbsp;</div>
                                     <Button onClick={e => submitForm()}>
                                         Enviar!
                                     </Button>
