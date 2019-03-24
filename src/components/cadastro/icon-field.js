@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from './whatsapp.svg';
+import MaskedInput from 'react-text-mask';
 
 const Container = styled.div`
     position:relative;
@@ -10,7 +11,8 @@ const Container = styled.div`
     border-radius: 3px;
 `;
 
-const StyledField = styled.input`
+// const StyledField = styled.input`
+const StMaskedInput = styled(MaskedInput)`  
   padding: 0.4em;
   border: none;
   color: blue;
@@ -40,7 +42,12 @@ const IconField = ({ field, // { name, value, onChange, onBlur }
         <div>
             <Container>
                 <StyledImg src={logo} />
-                <StyledField type="text" placeholder="Whatsapp" {...field} {...props} />
+                <StMaskedInput
+                    mask={['(', /[1-9]/, /\d/, ')', ' ', /\d/, ' ', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
+                    placeholder="Whatsapp"
+                    {...field}
+                    {...props}
+                />
             </Container>
             {touched[field.name] &&
                 errors[field.name] && <StyledErrMsg className="error">{errors[field.name]}</StyledErrMsg>}
