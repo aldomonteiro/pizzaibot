@@ -109,11 +109,12 @@ class Page extends React.Component {
                             )}
                         </Formik>
                     </React.Fragment>
-                ) : (<div>Obrigado por enviar as informações! Aguarde nosso contato em breve.
+                ) : (<div>
+                    Obrigado por enviar as informações! Aguarde nosso contato em breve.
                     <br />
                     <br />
-                    <a style={{ cursor: 'pointer' }} onClick={() => { this.setState({ showForm: true }) }}>
-                        Enviar novamente
+                    <a style={{ fontSize: '9px', cursor: 'pointer' }} onClick={() => { this.setState({ showForm: true }) }}>
+                        Se foi algo errado, você pode enviar novamente...
                     </a>
                 </div>)}
             </Container>
