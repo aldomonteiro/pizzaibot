@@ -1,6 +1,6 @@
 ---
-title: "Assistente virtual para receber pedidos de comida"
+title: "Transforme o seu WhatsApp em uma máquina de receber pedidos!"
 ---
 
-Conheça o **pizzaibot**: Chatbot que recebe os seus pedidos de comida no 
+Conheça o **pizzaibot**: Sistema que recebe os seus pedidos de comida no 
 Whatsapp e Messenger.
