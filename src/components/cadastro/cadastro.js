@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const ContainerTxt = styled.div`
-    font-size: 2 rem;
+    font-size: 2rem;
     text-align: left;
     margin: 1rem;
     font-weight: 800;
