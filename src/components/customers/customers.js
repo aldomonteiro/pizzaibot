@@ -38,29 +38,28 @@ const Customers = () => {
             }
         `}
         render={data => {
-            console.log(data);
             return (
                 <Container>
                     <Header>
                         <Title as="h2" size="large">
-                             Nossos Clientes
+                                Nossos Clientes
                         </Title>
                         <SubTitle>
                             {'Alguns clientes que já estão recebendo'}
-                            <br/>
+                            <br />
                             {'pedidos automaticamente pelo WhatsApp'}
                         </SubTitle>
                     </Header>
                     <ContainerImg>
                         {data.images.edges.map(image =>
-                        <Item key={image.node.childImageSharp.resize.src}>
-                            <Img
-                                alt={image.node.name}
-                                fixed={image.node.childImageSharp.resize}
-                                height={image.node.childImageSharp.resize.height}
-                                width={image.node.childImageSharp.resize.width}
-                            />
-                        </Item>
+                            <Item key={image.node.childImageSharp.resize.src}>
+                                <Img
+                                    alt={image.node.name}
+                                    fixed={image.node.childImageSharp.resize}
+                                    height={image.node.childImageSharp.resize.height}
+                                    width={image.node.childImageSharp.resize.width}
+                                />
+                            </Item>
                         )}
                     </ContainerImg>
                 </Container>
