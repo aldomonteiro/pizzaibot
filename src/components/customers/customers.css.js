@@ -43,8 +43,6 @@ export const ContainerImg = styled.ul`
 export const Item = styled.li`
     padding: 5px;
     margin-top: 10px;
-    border: 1px solid;
-    border-radius: 10px;
     display: flex;
     align-items: center;
 `;

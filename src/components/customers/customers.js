@@ -37,35 +37,35 @@ const Customers = () => {
                 }
             }
         `}
-            render={data => {
-                return (
-                    <Container>
-                        <Header>
-                            <Title as="h2" size="large">
+        render={data => {
+            return (
+                <Container>
+                    <Header>
+                        <Title as="h2" size="large">
                                 Nossos Clientes
                         </Title>
-                            <SubTitle>
-                                {'Alguns clientes que já estão recebendo'}
-                                <br />
-                                {'pedidos automaticamente pelo WhatsApp'}
-                            </SubTitle>
-                        </Header>
-                        <ContainerImg>
-                            {data.images.edges.map(image =>
-                                <Item key={image.node.childImageSharp.resize.src}>
-                                    <Img
-                                        alt={image.node.name}
-                                        fixed={image.node.childImageSharp.resize}
-                                        height={image.node.childImageSharp.resize.height}
-                                        width={image.node.childImageSharp.resize.width}
-                                    />
-                                </Item>
-                            )}
-                        </ContainerImg>
-                    </Container>
-                )
-            }
-            } />)
+                        <SubTitle>
+                            {'Alguns clientes que já estão recebendo'}
+                            <br />
+                            {'pedidos automaticamente pelo WhatsApp'}
+                        </SubTitle>
+                    </Header>
+                    <ContainerImg>
+                        {data.images.edges.map(image =>
+                            <Item key={image.node.childImageSharp.resize.src}>
+                                <Img
+                                    alt={image.node.name}
+                                    fixed={image.node.childImageSharp.resize}
+                                    height={image.node.childImageSharp.resize.height}
+                                    width={image.node.childImageSharp.resize.width}
+                                />
+                            </Item>
+                        )}
+                    </ContainerImg>
+                </Container>
+            )
+        }
+        } />)
 }
 
 export default Customers;
