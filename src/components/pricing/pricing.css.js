@@ -26,10 +26,13 @@ export const Items = styled.div`
 `;
 
 export const Columns = styled.div`
-    width: 24%;
-    margin: 1px;
+    width: 20%;
+    margin: 5px;
+    @media only screen and (max-width: 1000px) {
+        width: 30%;
+    }
     @media only screen and (max-width: 600px) {
-        width: 100%;
+        width: 80%;
     }
 `;
 
@@ -51,7 +54,7 @@ export const PriceHeader = styled.li`
     background-color: #35439B;
     border-radius: 5px;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -61,30 +64,31 @@ export const PriceHeader = styled.li`
 export const PriceItem = styled.li`
     background-color: ${props => props.bgColor ? props.bgColor : 'white'}
     color: ${props => props.color ? props.color : 'black'}
-    font-size: ${props => props.fontSize ? props.fontSize : '18px'}
+    font-size: ${props => props.fontSize ? props.fontSize : '16px'}
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; 
     border-bottom: 1px solid #eee;
     padding: 20px;
     text-align: center;
 `;
 
-//   .price.grey {
-//     background - color: #eee;
-//     font - size: 20px;
-// }
+export const Img = styled.img`
+    height: 45px;
+    width: 45px;
+`;
 
-//   .button {
-//     background - color: #4CAF50;
-//     border: none;
-//     color: white;
-//     padding: 10px 25px;
-//     text - align: center;
-//     text - decoration: none;
-//     font - size: 18px;
-// }
-
-// @media only screen and(max - width: 600px) {
-//     .columns {
-//         width: 100 %;
-//     }
-// }
+export const Button = styled.div`
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: ${props => props.bgColor ? props.bgColor : 'white'}
+    color: white;
+    font-size: 22px;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; 
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+    :hover {
+        background-color: #008CBA;
+        color: white;
+    }
+`;

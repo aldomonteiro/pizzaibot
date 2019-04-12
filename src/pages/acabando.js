@@ -13,7 +13,7 @@ import Button from '../components/button/button';
 import Cadastro from '../components/cadastro/cadastro';
 
 class Page extends React.Component {
-    constructor(props) {
+    constructor (props) {
         super(props);
         this.state = {
             open: false,
@@ -21,9 +21,9 @@ class Page extends React.Component {
         this.myRef = React.createRef();
     }
 
-    onOpenModal = () => {
-        this.setState({ open: true });
-    };
+    // onOpenModal = () => {
+    //     this.setState({ open: true });
+    // };
 
     onCloseModal = () => {
         this.setState({ open: false });
@@ -54,7 +54,7 @@ class Page extends React.Component {
                         onClose={this.onCloseModal}
                         center
                         container={this.myRef.current}>
-                        <Cadastro />
+                        <Cadastro origin={'acabando'} />
                     </Modal>
                 </div>
             </Layout>

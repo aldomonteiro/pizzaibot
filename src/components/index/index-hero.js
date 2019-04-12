@@ -1,10 +1,13 @@
 /* eslint-disable indent */
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import Title from '../title';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import Modal from 'react-responsive-modal';
+
 import Button from '../button/button';
+import Cadastro from '../cadastro/cadastro';
 
 const BaseContainer = styled.div`
     position: relative;
@@ -19,8 +22,8 @@ const MainContainer = styled(BaseContainer)`
 `;
 
 const ImgContainer = styled.div`
-    height: 500px;
-    width: 200px;
+    height: auto;
+    width: 300px;
     @media only screen and (max-width: 600px) {
       display: none;
     }
@@ -52,7 +55,10 @@ const BackgContainer = styled.div`
   height: 100%;
 `;
 
-const IndexHero = () => (
+const IndexHero = () => {
+    const [isOpen, setOpen] = useState(false);
+    const modalContainer = useRef(null);
+    return (
     <StaticQuery query={graphql`
       query IndexHeroQuery {
             indexJson {
@@ -66,9 +72,9 @@ const IndexHero = () => (
                 }
               }
             }
-            imgOne: file(relativePath: { eq: "images/pizzaibot-screenshot1.png" }) {
+            imgOne: file(relativePath: { eq: "images/whatsapp-chat-mock.png" }) {
               childImageSharp {
-                sizes(maxWidth: 365, maxHeight: 792) {
+                sizes {
                   ...GatsbyImageSharpSizes
                 }
               }
@@ -88,7 +94,7 @@ const IndexHero = () => (
                     <Img sizes={data.backg1.childImageSharp.sizes}
                         style={{ height: '100vh' }} />
                 </BackgContainer>
-                <MainContainer>
+                <MainContainer ref={modalContainer}>
                     <TextsContainer>
                         <Title as="h2" size="large">
                             {data.indexJson.content.childMarkdownRemark.frontmatter.title}
@@ -96,19 +102,25 @@ const IndexHero = () => (
                         <SubTextContainer
                             dangerouslySetInnerHTML={{ __html: data.indexJson.content.childMarkdownRemark.html }}>
                         </SubTextContainer>
-                        <a href="https://admin.pizzaibot.com">
-                            <Button>
-                                Comece a usar gratuitamente!
-                        </Button>
-                        </a>
+                        <Button onClick={() => setOpen(true)}>
+                        Comece a usar gratuitamente!
+                    </Button>
                     </TextsContainer>
                     <ImgContainer>
                         <Img sizes={data.imgOne.childImageSharp.sizes} />
                     </ImgContainer>
+                    <Modal
+                        open={isOpen}
+                        onClose={() => setOpen(false)}
+                        center
+                        container={modalContainer.current}>
+                        <Cadastro origin='index-hero' />
+                    </Modal>
                 </MainContainer>
             </BaseContainer>
         )}
     />
 );
+}
 
 export default IndexHero;

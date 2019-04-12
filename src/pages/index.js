@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import Layout from 'components/layout';
 import Box from 'components/box';
 import Title from 'components/title';
-import Pricing from 'components/pricing'
+import Pricing from 'components/pricing';
+import Customers from 'components/customers';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
@@ -59,6 +60,11 @@ const Index = ({ data }) => (
                     </div>
                 </ContainerTitleText>
             </Box>
+            <section id="clientes">
+                <Box>
+                    <Customers />
+                </Box>
+            </section>
             <section id="planos">
                 <Box>
                     <Pricing />

@@ -7,7 +7,7 @@ const Container = styled.div`
     position:relative;
     margin: 10px;
     background:#D4DFF0;
-    width: 70%;
+    width: 81%;
     border-radius: 3px;
 `;
 
@@ -16,10 +16,10 @@ const StMaskedInput = styled(MaskedInput)`
   padding: 0.4em;
   border: none;
   color: blue;
-  font-size: 20px;
+  font-size: 15px;
   background: #D4DFF0;
-  width: 95%;
-  padding-left: 40px;
+  width: 90%;
+  padding-left: 30px;
   height: 20px;
 `;
 
